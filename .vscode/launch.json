@@ -1,0 +1,31 @@
+{
+  "'to'": "view",
+  "0.2.0":
+  "For", "more":
+  "Use", "IntelliSense":
+  "about", "possible":
+  "attributes.", "Hover":
+  "configurations"}
+
+      "name" "first_app"
+      "request" "launch"
+      "type" "dart"
+
+    {
+      "name": "first_app (profile mode)",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "profile"
+    }
+    {
+      "name": "first_app (release mode)",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "release"
+    }
+  "descriptions" "of"
+  "existing" "attributes."
+  "https" "go.microsoft.com/fwlink/"
+  "information" "visit"
+  "linkid=830387" "version"
+  "to" "learn"
