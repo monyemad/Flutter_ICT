@@ -87,7 +87,7 @@ class Page2 extends StatelessWidget {
         backgroundColor: Colors.blueAccent,
       ),
       body: Container(
-        color: Colors.grey.shade400,
+        color: Colors.grey.shade200,
         child: Padding(
           padding: const EdgeInsets.all(10),
           child: Column(
