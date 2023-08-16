@@ -1,7 +1,5 @@
 # first_app
 ![Uploading WhatsApp Image 2023-08-16 at 14.54.32.jpg…]()
-![Uploading WhatsApp Image 2023-08-16 at 14.54.47.jpg…]()
-
 
 A new Flutter project.
 
