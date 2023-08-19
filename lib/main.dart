@@ -1,8 +1,15 @@
+import 'package:firebase_core/firebase_core.dart';
+import 'package:first_app/firebase_options.dart';
 import 'package:first_app/ui/screen/counter.dart';
 import 'package:first_app/ui/screen/home_page.dart';
+import 'package:first_app/ui/screen/profile.dart';
 import 'package:flutter/material.dart';
 
-main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MyApp());
 }
 
@@ -37,6 +44,7 @@ class _MyHomePage3State extends State<MyHomePage3> {
   List<Widget> screen=[
     const MyHomePage(),
     const Page1(total: 0,),
+    const Profile(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -49,7 +57,8 @@ class _MyHomePage3State extends State<MyHomePage3> {
           },
           items: const [
             BottomNavigationBarItem(icon: Icon(Icons.home_filled), label: 'Home'),
-            BottomNavigationBarItem(icon: Icon(Icons.add_box_rounded), label: 'counter'),
+            BottomNavigationBarItem(icon: Icon(Icons.add_box_outlined), label: 'Counter'),
+            BottomNavigationBarItem(icon: Icon(Icons.account_circle_outlined), label: 'Profile'),
           ],
         ),
     );

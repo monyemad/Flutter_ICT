@@ -1,5 +1,8 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:first_app/data/models/smart.dart';
 import 'package:first_app/ui/screen/counter.dart';
+import 'package:first_app/ui/screen/login.dart';
+import 'package:first_app/ui/screen/profile.dart';
 import 'package:first_app/ui/widgets/smart_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -41,6 +44,15 @@ class _MyHomePageState extends State<MyHomePage> {
             "06/Echo-Dot-Kids-Edition-Blue.jpg?resize=768,768",
         price: 300),
   ];
+  Future<bool> signout() async {
+    try{
+      await FirebaseAuth.instance.signOut();
+      return true;
+    }catch(e){
+      print(e.toString());
+      return false;
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -48,6 +60,24 @@ class _MyHomePageState extends State<MyHomePage> {
       backgroundColor: Colors.grey.shade400,
       appBar: AppBar(
         title: const Text('Smart tech.'),
+        centerTitle: true,
+        leading: IconButton(
+          onPressed: ()async{
+            await signout().then((value) {
+              if (value){
+                Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(builder: (context){
+                      return const Login();
+                    })
+                );
+              }
+            });
+          },
+          icon: const Icon
+            (Icons.logout_rounded),
+        ),
+        actions: const [Icon(Icons.menu_rounded)],
         backgroundColor: Colors.blueAccent,
       ),
       body: SafeArea(

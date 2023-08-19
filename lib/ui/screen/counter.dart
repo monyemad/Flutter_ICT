@@ -30,9 +30,11 @@ class _Page1State extends State<Page1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: const Text("Counter"),
+      ),
       body: Container(
-        color: Colors.grey.shade200,
+        color: Colors.white,
         child: Padding(
           padding: const EdgeInsets.all(30.0),
           child: Column(
