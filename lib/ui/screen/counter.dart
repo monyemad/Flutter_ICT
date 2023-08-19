@@ -32,6 +32,7 @@ class _Page1State extends State<Page1> {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Counter"),
+        centerTitle: true,
       ),
       body: Container(
         color: Colors.white,
