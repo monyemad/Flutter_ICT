@@ -8,4 +8,12 @@ class Smart {
     required this.thumbnail,
     required this.price,
   });
+
+  factory Smart.fromJson(Map<String, dynamic> json) {
+    return Smart(
+      title: json['title'],
+      thumbnail: json['thumbnail'],
+      price: json['price'],
+    );
+  }
 }

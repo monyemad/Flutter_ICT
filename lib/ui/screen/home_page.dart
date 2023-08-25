@@ -2,7 +2,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:first_app/data/models/smart.dart';
 import 'package:first_app/ui/screen/counter.dart';
 import 'package:first_app/ui/screen/login.dart';
-import 'package:first_app/ui/screen/profile.dart';
 import 'package:first_app/ui/widgets/smart_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -68,7 +67,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.pushReplacement(
                     context,
                     MaterialPageRoute(builder: (context){
-                      return const Login();
+                      return Login();
                     })
                 );
               }
